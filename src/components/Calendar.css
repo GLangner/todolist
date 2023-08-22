@@ -1,0 +1,70 @@
+/* Calendar.css */
+
+/* Apply a subtle background gradient */
+.calendar-container {
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  border: 0.1rem solid #ccc;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+/* Style the calendar tiles */
+.react-calendar__tile {
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style the selected date */
+.react-calendar__tile--active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Style the navigation buttons */
+.react-calendar__navigation button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.custom-date-slider-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.date-slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.date-slider-item:hover {
+  background-color: #f0f0f0;
+}
+
+.date-slider-item.active {
+  background-color: #007bff;
+  color: white;
+}

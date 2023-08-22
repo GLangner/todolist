@@ -1,0 +1,39 @@
+/* TodoApp.css */
+.todo-app {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+/* Style the input and buttons */
+.task-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.add-button,
+.date-button,
+.category-select {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-button:hover,
+.date-button:hover,
+.category-select:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+

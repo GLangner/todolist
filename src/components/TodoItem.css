@@ -1,0 +1,76 @@
+/* TodoItem.css */
+
+/* Style the task item */
+.todo-item {
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Style the buttons */
+.todo-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.todo-item button:hover {
+  color: #0056b3;
+}
+
+/* Styling for the editing form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.edit-form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.edit-form button {
+  background-color: #28a745;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background-color: #218838;
+}
+
+.task-category {
+  margin-right: 8px; /* Add some margin to create spacing */
+  color: #888;
+}
+.task-priority {
+  margin-right: 8px; /* Add some margin to create spacing */
+  color: #888;
+}
+

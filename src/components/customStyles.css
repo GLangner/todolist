@@ -1,0 +1,43 @@
+/* customStyles.css */
+
+/* Custom colors */
+.btn-add {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-add:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-save {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-save:hover {
+    background-color: #218838;
+    border-color: #218838;
+  }
+  
+  .btn-edit {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  
+  .btn-edit:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+  }
+  

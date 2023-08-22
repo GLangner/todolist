@@ -1,0 +1,18 @@
+/* Todo List */
+.todo-app {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f7f7f7;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  font-size: 1rem;
+}
