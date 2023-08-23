@@ -1,8 +1,8 @@
-// import { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TodoApp from './components/TodoApp';
 // import WeatherComponent from './components/WeatherComponent';
-// import CalendarComponent from './components/Calendar'; // Make sure to import CalendarComponent
-import './App.css';
+// import './App.css';
 
 function App() {
   // const [dueDate, setDueDate] = useState(new Date());
@@ -13,15 +13,16 @@ function App() {
   // };
 
   return (
-    <div className="app">
-      <TodoApp />
-      {/* <WeatherComponent setLocation={setLocation} />
-      <CalendarComponent
-        selectedDate={dueDate}
-        onDateChange={handleDateChange}
-        location={location}
-      /> */}
-    </div>
+    <Router>
+        {/* <WeatherComponent /> */}
+      <div className="app">
+        <Routes>
+          {/* <Route path="/" element={<WeatherComponent />} /> */}
+          <Route path="/" element={<TodoApp />} />
+        </Routes>
+        {/* <TodoApp /> */}
+      </div>
+    </Router>
   );
 }
 

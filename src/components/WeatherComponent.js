@@ -88,7 +88,7 @@ function WeatherComponent() {
               onChange={handleTypedLocationChange}
             />
             {typedLocation && (
-              <button onClick={() => fetchWeatherData(typedLocation)}>Get Weather</button>
+              <button className='weatherButton' onClick={() => fetchWeatherData(typedLocation)}>Get Weather</button>
             )}
           </div>
         )}

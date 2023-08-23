@@ -3,7 +3,7 @@ import './TodoApp.css';
 import './customStyles.css';
 import CalendarComponent from './Calendar';
 import TodoList from './TodoList';
-import WeatherComponent from './WeatherComponent'; // Import WeatherComponent
+// import WeatherComponent from './WeatherComponent'; // Import WeatherComponent
 
 
 function TodoApp() {
@@ -39,6 +39,9 @@ function TodoApp() {
         priority: selectedPriority, // Store the selected priority
         completed: false,
         dueDate: selectedDate instanceof Date ? selectedDate : null,
+        subTasks: [],
+        notes: '',
+        attatchments: [],
       };
       setTasks([...tasks, newTask]);
       setTaskInput('');
@@ -86,74 +89,101 @@ function TodoApp() {
   };
 
   return (
+    <div>
+    <h1>Task List</h1>
     <div className="todo-app">
-      <h1>Todo List</h1>
-      <input
-        type="text"
-        value={taskInput}
-        onChange={(e) => setTaskInput(e.target.value)}
-        className='task-input'
-      />
-      <button onClick={handleAddTask} className='add-button'>Add Task</button>
-      <button onClick={toggleCalendarVisibility} className='date-button'>
-        {calendarVisible ? 'Hide Calendar' : 'Set Date'}
-      </button>
+      <div className='pb-2'>
+        <div className='card'>
+          <div className='card-body'>
+            <div>
+              <div className='d-flex flex-row align-items-center'>
+                <input
+                  className='form-control form-control-lg'
+                  id="exampleFormControlInput1"
+                  placeholder="Add new..."
+                  type="text"
+                  value={taskInput}
+                  onChange={(e) => setTaskInput(e.target.value)}
+                />
+                
+              </div>
+              <div className='d-flex flex-row justify-content-end align-items-center'>
+                <span
+                  className="btn btn-primary"
+                  onClick={toggleCalendarVisibility}
+                  data-mdb-toggle="tooltip"
+                  title="Set due date"
+                >
+                  <i className="fas fa-calendar-alt fa-lg me-1"></i>
+                  {calendarVisible ? ' Hide Calendar' : ' Set Date'}
+                </span>
 
-      <select
-        value={selectedCategory}
-        onChange={(e) => setSelectedCategory(e.target.value)}
-        className='category-select'
-      >
-        <option value="">Select Category</option>
-        <option value="Work">Work</option>
-        <option value="Personal">Personal</option>
-        <option value="Wishlist">Wishlist</option>
-        <option value="Birthday">Birthday</option>
-        <option value="custom">Custom Category</option>
-      </select>
-      <select
-        value={selectedPriority}
-        onChange={(e) => setSelectedPriority(e.target.value)}
-      >
-        <option value="">No Priority</option>
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
-
-      {selectedCategory === 'custom' && (
-        <div className='custom-category-container'>
-          <input
-            type='text'
-            placeholder='Enter custom category'
-            value={customCategoryInput}
-            onChange={(e) => setCustomCategoryInput(e.target.value)}
-          />
-          <button onClick={handleAddCustomCategory}>Add</button>
+                
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="btn btn-primary"
+              >
+                <option value="">Select Category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Wishlist">Wishlist</option>
+                <option value="Birthday">Birthday</option>
+                <option value="custom">Custom Category</option>
+              </select>
+              <select
+                value={selectedPriority}
+                onChange={(e) => setSelectedPriority(e.target.value)}
+                className="btn btn-primary"
+              >
+                <option value="">No Priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <button onClick={handleAddTask}
+                  type="button" 
+                  className="btn btn-primary">Add
+                </button>
+              </div>
+            </div>
+            {selectedCategory === 'custom' && (
+              <div className='custom-category-container'>
+                <input
+                  type='text'
+                  placeholder='Enter custom category'
+                  value={customCategoryInput}
+                  onChange={(e) => setCustomCategoryInput(e.target.value)}
+                />
+                <button onClick={handleAddCustomCategory}>Add</button>
+              </div>
+              )}
+          </div>
         </div>
-      )}
+      </div>
 
       {calendarVisible && (
         <CalendarComponent selectedDate={selectedDate} onDateChange={setSelectedDate} />
       )}
-
-      <input
-          type="text"
-          placeholder="Search tasks"
-          value={searchQuery}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
-            handleSearch(e.target.value);
-          }}
-        />
+        <div className='searchBar'>
+          <input
+              type="text"
+              placeholder="Search tasks"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                handleSearch(e.target.value);
+              }}
+            />
+        </div>
         <TodoList
           tasks={searchQuery ? filteredTasks : tasks}
           onToggleCompletion={handleToggleCompletion}
           onDeleteTask={handleDeleteTask}
           onUpdateTask={handleUpdateTask}
         />
-        {/* Add the WeatherComponent */}
-        <WeatherComponent />
+        
+        </div>
     </div>
   );
 }

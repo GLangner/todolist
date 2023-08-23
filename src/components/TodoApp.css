@@ -1,6 +1,6 @@
 /* TodoApp.css */
 .todo-app {
-  max-width: 40rem;
+  max-width: 100rem;
   margin: 0 auto;
   padding: 2rem;
   background-color: #fff;
@@ -18,22 +18,62 @@
   width: 200px;
 }
 
-.add-button,
+/* .add-button,
 .date-button,
-.category-select {
+.category-select,
+.priority-select {
   background-color: #007bff;
   border-color: #007bff;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.25rem;
+  margin: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .add-button:hover,
 .date-button:hover,
-.category-select:hover {
+.category-select:hover,
+.priority-select:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+} */
+h1{
+    position: relative;
+    /* left: 24rem; */
+    background: #ffffff;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.searchBar{
+    position: relative;
+    background: #ffffff;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+.form-control {
+  border-color: transparent;
+}
+#list1 .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+#list1 .select-input.form-control[readonly]:not([disabled]) {
+  background-color: #fbfbfb;
+}
+.card-body{
+  border-color: transparent;
+}
+.flex-row{
+  gap: 0.5rem;
+  margin: 0.5rem;
 }
 
