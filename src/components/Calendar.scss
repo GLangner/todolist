@@ -1,0 +1,40 @@
+@import 'customStyles.css';
+
+.weather-details {
+    // background-color: #f4f4f4;
+    padding: 20px;
+    // border: 1px solid #ccc;
+    border-radius: 1rem;
+    margin: 2rem 1rem;
+    border-color: transparent;
+  
+    .weather-info {
+      h4 {
+        border-radius: 1rem;
+      }
+  
+      .weather-item {
+        margin-bottom: 10px;
+  
+        span {
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+    }
+  
+    .weather-icon-container {
+      text-align: center;
+      border-radius: 1rem;
+  
+      .weather-icon {
+        max-width: 100px;
+      }
+    }
+  }
+  
+  h4{
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }

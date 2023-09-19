@@ -1,43 +1,27 @@
-/* customStyles.css */
+:root {
+  --background-color: #f0f0f0;
+  --input-box-color: #ffffff;
+  --text-color: #333;
+  --hover-darker-color: #ccc;
+  --custom-check-box-one: #4F29F0;
+  --custom-white-black: #fff;
+}
 
-/* Custom colors */
-.btn-add {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-add:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  .btn-save {
-    background-color: #28a745;
-    border-color: #28a745;
-  }
-  
-  .btn-save:hover {
-    background-color: #218838;
-    border-color: #218838;
-  }
-  
-  .btn-edit {
-    background-color: #ffc107;
-    border-color: #ffc107;
-  }
-  
-  .btn-edit:hover {
-    background-color: #e0a800;
-    border-color: #e0a800;
-  }
-  
-  .btn-delete {
-    background-color: #dc3545;
-    border-color: #dc3545;
-  }
-  
-  .btn-delete:hover {
-    background-color: #c82333;
-    border-color: #c82333;
-  }
-  
+.light-theme {
+  --background-color: #EEE0C9;
+  --input-box-color: #ADC4CE;
+  --text-color: #000000;
+  --hover-darker-color: #96B6C5;
+  --custom-white-black: #FAF3F0;
+  --custom-check-box-one: pink;
+}
+
+.dark-theme {
+  --background-color: #333;
+  --input-box-color: #212121;
+  --text-color: #f0f0f0;
+  --hover-darker-color: #000;
+  --box-shadoww: black;
+  --custom-white-black: #000000;
+  --custom-check-box-one: #f02929;
+}

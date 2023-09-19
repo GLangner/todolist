@@ -1,0 +1,63 @@
+/* CalendarWithWeather.scss */
+
+.calendar-weather-container {
+    padding: 20px;
+  
+    .calendar-container {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      .react-calendar {
+        width: 100%;
+        // max-width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      border-color: transparent;
+    }
+  
+    .weather-container {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      .form-control {
+        width: 100%;
+        // max-width: 300px;
+        margin-bottom: 1rem;
+      }
+  
+      .weather-info {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1rem;
+        border-color: transparent;
+  
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+  
+        h4 {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+  
+        .custom-date-slider-container {
+          margin-bottom: 1rem;
+        }
+  
+        .forecast-details {
+          p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  

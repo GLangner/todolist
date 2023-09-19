@@ -1,67 +1,54 @@
-.todo-item {
-  background-color: #fff;
-  border: 0.1rem solid #ccc;
+@import 'customStyles.css';
+.form-check {
+  display: block;
+  min-height: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  margin-bottom: 0.125rem;
+}
+.form-check-subTask{
+  display: block;
+  min-height: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  margin-bottom: 0.125rem;
+  margin-left: 1rem;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 4.25em;
+}
+i:hover{
+  cursor: pointer;
+}
+.card{
+  border-color: transparent;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.text-muted{
+  color: var(--text-color)!important;
+}
+.another-box{
   padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column; /* Adjust to a column layout */
-  gap: 1rem; /* Add vertical spacing between elements */
-  transition: background-color 0.2s ease-in-out;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
 }
 
-.todo-item:hover {
-  background-color: #f0f0f0;
+.todo-edit-container{
+  border-radius: 5rem;
 }
-
-.todo-item.completed {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Style the buttons */
-.todo-item button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  color: #007bff;
-}
-
-.todo-item button:hover {
-  color: #0056b3;
-}
-
-/* Styling for the editing form */
-.edit-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* Add vertical spacing between form elements */
-  margin-top: 1rem;
-}
-
-.edit-form input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 0.1rem solid #ccc;
-  border-radius: 0.3rem;
-}
-
-.edit-form button {
-  background-color: #28a745;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  color: white;
-  cursor: pointer;
-}
-
-.edit-form button:hover {
-  background-color: #218838;
-}
-
-.task-category,
-.task-priority {
-  color: #888;
-  margin-top: 0.5rem; /* Add spacing above category and priority */
+.weather-container{
+  margin: 2rem 0rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--background-color);
 }

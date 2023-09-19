@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './TodoApp.css';
-import './customStyles.css';
+// import './customStyles.css';
 import CalendarComponent from './Calendar';
 import TodoList from './TodoList';
-// import WeatherComponent from './WeatherComponent'; // Import WeatherComponent
+import WeatherComponent from './WeatherComponent'; // Import WeatherComponent
 
 
-function TodoApp() {
+function TodoApp( {isDarkMode} ) {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
   const [taskInput, setTaskInput] = useState('');
@@ -89,16 +89,16 @@ function TodoApp() {
   };
 
   return (
-    <div>
-    <h1>Task List</h1>
-    <div className="todo-app">
-      <div className='pb-2'>
-        <div className='card'>
-          <div className='card-body'>
+    <div className={`main-content ${isDarkMode ? 'dark' : ''} `}>
+    <h1 className='custom-input-color'>Task List</h1>
+    <div className="todo-app custom-input-color">
+      <div className='custom-ground-color'>
+        <div className='card custom-ground-color'>
+          <div className='card-body '>
             <div>
               <div className='d-flex flex-row align-items-center'>
                 <input
-                  className='form-control form-control-lg'
+                  className='form-control form-control-lg custom-input-color'
                   id="exampleFormControlInput1"
                   placeholder="Add new..."
                   type="text"
@@ -107,9 +107,10 @@ function TodoApp() {
                 />
                 
               </div>
-              <div className='d-flex flex-row justify-content-end align-items-center'>
+              <div className=''>
+              <div className='buttons-container d-flex flex-row justify-content-end align-items-center'>
                 <span
-                  className="btn btn-primary"
+                  className="btn btn-primary custom-button-color"
                   onClick={toggleCalendarVisibility}
                   data-mdb-toggle="tooltip"
                   title="Set due date"
@@ -122,7 +123,7 @@ function TodoApp() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="btn btn-primary"
+                className="btn btn-primary custom-button-color"
               >
                 <option value="">Select Category</option>
                 <option value="Work">Work</option>
@@ -134,7 +135,7 @@ function TodoApp() {
               <select
                 value={selectedPriority}
                 onChange={(e) => setSelectedPriority(e.target.value)}
-                className="btn btn-primary"
+                className="btn btn-primary custom-button-color"
               >
                 <option value="">No Priority</option>
                 <option value="low">Low</option>
@@ -143,7 +144,7 @@ function TodoApp() {
               </select>
               <button onClick={handleAddTask}
                   type="button" 
-                  className="btn btn-primary">Add
+                  className="btn btn-primary custom-button-color">Add
                 </button>
               </div>
             </div>
@@ -151,6 +152,7 @@ function TodoApp() {
               <div className='custom-category-container'>
                 <input
                   type='text'
+                  className='custom-button-color'
                   placeholder='Enter custom category'
                   value={customCategoryInput}
                   onChange={(e) => setCustomCategoryInput(e.target.value)}
@@ -158,6 +160,7 @@ function TodoApp() {
                 <button onClick={handleAddCustomCategory}>Add</button>
               </div>
               )}
+              </div>
           </div>
         </div>
       </div>
@@ -165,9 +168,10 @@ function TodoApp() {
       {calendarVisible && (
         <CalendarComponent selectedDate={selectedDate} onDateChange={setSelectedDate} />
       )}
-        <div className='searchBar'>
+        <div className='searchBar custom-ground-color'>
           <input
               type="text"
+              className='form-control form-control-lg custom-input-color'
               placeholder="Search tasks"
               value={searchQuery}
               onChange={(e) => {
@@ -176,6 +180,7 @@ function TodoApp() {
               }}
             />
         </div>
+        
         <TodoList
           tasks={searchQuery ? filteredTasks : tasks}
           onToggleCompletion={handleToggleCompletion}
@@ -184,6 +189,7 @@ function TodoApp() {
         />
         
         </div>
+        <WeatherComponent/>
     </div>
   );
 }

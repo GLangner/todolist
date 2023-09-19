@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
+    "bootstrap-icons": "^1.10.5",
+    "node-sass": "^7.0.3",
     "rc-slider": "^10.2.1",
     "react": "^18.2.0",
     "react-calendar": "^4.6.0",
@@ -15,6 +17,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "sass": "^3.13.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
@@ -41,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
   }
 }

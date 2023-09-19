@@ -69,26 +69,43 @@ function WeatherComponent() {
   };
 
   return (
-    <div className="weather-component">
-      <div className="current-location-weather">
+    <div className="weather-component custom-input-color">
+      <div className="current-location-weather current-input-weather">
         {weatherData ? (
-          <div className="weather-info">
+          <div className="weather-details custom-ground-color">
+            <h4 className="font-weight-bold custom-input-color">{weatherData.location.name}, {weatherData.location.country}</h4>
+              <div className="weather-item custom-input-color">
+                <span className="font-weight-bold fasd current-input-weather">Date and Time: {weatherData.location.localtime}</span>
+              </div>
+              <div className="weather-item current-input-weather custom-input-color">
+                <span className="font-weight-bold ">Temperature: {weatherData.current.temp_c}°C</span>
+              </div>
+              <div className="weather-item custom-input-color">
+                <span className="font-weight-bold">Conditions: {weatherData.current.condition.text}</span>
+              </div>
+              <div className="weather-icon-container custom-input-color">
+                <img src={weatherData.current.condition.icon}alt="Weather Icon"/>
+              </div>
+          {/* <div className="weather-info">
             <h3>{weatherData.location.name}, {weatherData.location.country}</h3>
             <p>Date and Time: {weatherData.location.localtime}</p>
             <p>Temperature: {weatherData.current.temp_c}°C</p>
             <p>Conditions: {weatherData.current.condition.text}</p>
+            <img src={weatherData.current.condition.icon}alt="Weather Icon"/>
+          </div> */}
           </div>
         ) : (
-          <div className="weather-info">
+          <div className="weather-info custom-ground-color">
             <h3>Current Weather</h3>
             <input
               type="text"
-              placeholder="Type your location for weather"
+              className='form-control form-control-lg custom-input-color'
+              placeholder="Location..."
               value={typedLocation}
               onChange={handleTypedLocationChange}
             />
             {typedLocation && (
-              <button className='weatherButton' onClick={() => fetchWeatherData(typedLocation)}>Get Weather</button>
+              <button className='weatherButton custom-button-color' onClick={() => fetchWeatherData(typedLocation)}>Get Weather</button>
             )}
           </div>
         )}

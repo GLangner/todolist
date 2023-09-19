@@ -1,11 +1,15 @@
 /* TodoApp.css */
+@import 'customStyles.css';
+
 .todo-app {
   max-width: 100rem;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fff;
   box-shadow: 0px 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+}
+.card{
+  box-shadow: 5px 5px 5px #ccc;
 }
 
 /* Style the input and buttons */
@@ -42,32 +46,39 @@
 h1{
     position: relative;
     /* left: 24rem; */
-    background: #ffffff;
+    max-width: 100rem;
+    margin: 2rem auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
     border-radius: 1rem;
-    margin: 1rem;
     padding: 1rem;
     text-align: center;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 .searchBar{
     position: relative;
-    background: #ffffff;
+    background-color: var(--background-color);
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
     text-align: center;
     line-height: 2rem;
     font-size: 1.5rem;
+    box-shadow: 5px 5px 5px #ccc;
+
 }
 .form-control {
   border-color: transparent;
+  background-color: var(--background-color);
 }
 #list1 .form-control:focus {
   border-color: transparent;
   box-shadow: none;
 }
 #list1 .select-input.form-control[readonly]:not([disabled]) {
-  background-color: #fbfbfb;
+  background-color: var(--background-color);
+  
 }
 .card-body{
   border-color: transparent;
@@ -76,4 +87,76 @@ h1{
   gap: 0.5rem;
   margin: 0.5rem;
 }
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  
+  @media (max-width: 550px) {
+    flex-direction: column!important;
+    align-items: flex-start;
+    
+    .btn {
+      width: 100%; /* Make buttons full width */
+      margin-bottom: 10px; /* Add space between buttons */
+    }
+  }
+}
+.custom-input-color{
+  background-color: var(--input-box-color);
+  color: var(--text-color);
+  box-shadow: 5px 5px 5px var(--hover-darker-color);
+}
+
+.custom-input-color:focus{
+  background-color: var(--input-box-color);
+  color: var(--text-color);
+}
+
+.custom-input-color::placeholder{
+  background-color: var(--input-box-color);
+  color: var(--text-color);
+}
+
+.custom-ground-color {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 5px 5px 5px var(--hover-darker-color);
+  border-radius: 0.5rem;
+}
+
+.custom-button-color{
+  background-color: var(--input-box-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+  box-shadow: 5px 5px 5px var(--hover-darker-color);
+}
+.custom-button-color:hover{
+  background-color: var(--hover-darker-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+}
+.custom-button-color:focus{
+  background-color: var(--hover-darker-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+}
+.custom-button-color option :checked{
+  background-color: var(--hover-darker-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+}
+.custom-button-color option{
+  background-color: var(--hover-darker-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+}
+.custom-button-color:hover option{
+  background-color: var(--hover-darker-color);
+  color: var(--text-color);
+  border-color: var(--background-color);
+}
+
+
 
